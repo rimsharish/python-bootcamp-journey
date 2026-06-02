@@ -1,0 +1,7 @@
+product=input("enter the product name: ")
+price=int(input("enter the price: "))
+quantity=int(input("enter the quantity: "))
+print(f"product: {product}")
+print(f"price: {price}")
+print(f"quantity: {quantity}")
+print(f"total cost: {price*quantity}")
