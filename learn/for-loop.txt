@@ -1,0 +1,28 @@
+(start,end,range)
+
+- for i in range (10,25,2)                    
+    print(i)                                
+
+o/p:
+10
+12
+14
+.
+.
+24
+
+- for i in range(10,0,-1)
+    print(i)
+
+o/p:
+10
+9
+8
+.
+.
+1
+
+- default value =>  start = 0
+                    update = 1
+
+                    
