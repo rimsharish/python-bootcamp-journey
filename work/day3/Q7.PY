@@ -1,10 +1,8 @@
 def check_even_odd(n):
-    even = "even"
-    return even
-    od = "odd"
+    if(n%2==0):
+        return "even"
+    else:
+        return "odd"
 
-e = check_even_odd(4)
-o = check_even_odd(3)
-
-print(e)
-print(o)
+print(check_even_odd(4))
+print(check_even_odd(3))
