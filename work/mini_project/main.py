@@ -40,7 +40,7 @@ while(True):
         student[student_id] = {
             "Name" : name,
             "age" : age,
-            "course" : 0,
+            "course" : "not enrolled yet",
             "attendance_percentage" : 0,
             "marks" : 0,
             "grade" : 0
@@ -95,4 +95,45 @@ while(True):
         else:
             print("student does not exist")
 
+    elif(option1==5):
+        student_id = int(input("enter student ID: "))
     
+        if(student_id in student):
+            marks = int(input("enter marks(10-100): "))
+            student[student_id]["marks"]=marks
+
+            if(90<=marks<=100):
+                student[student_id]["grade"]="A"
+            if(80<=marks<=89):
+                student[student_id]["grade"]="B"
+            if(70<=marks<=79):
+                student[student_id]["grade"]="C"
+            if(60<=marks<=69):
+                student[student_id]["grade"]="D"
+            if(marks<60):
+                student[student_id]["grade"]="E"
+            print(student[student_id])
+        else:
+            print("student does not exist")
+
+    elif(option1==6):
+        student_id = int(input("enter student ID: "))
+    
+        if(student_id in student):
+            print("----STUDENT REPORT-----")
+            print(f"student id: {student_id}")
+            print(f"name: {student[student_id]["Name"]}")
+            print(f"age: {student[student_id]["age"]}")
+            print(f"course: {student[student_id]["course"]}")
+            print(f"attendance percentage: {student[student_id]["attendance_percentage"]}")
+            print(f"marks: {student[student_id]["marks"]}")
+            print(f"grade: {student[student_id]["grade"]}")
+        else:
+            print("student does not exist")
+
+    elif(option1==7):
+        for student_id in student:
+            print(f"{student_id} : {student[student_id]["Name"]}")
+
+    elif(option1==8):
+        break
