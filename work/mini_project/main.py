@@ -62,13 +62,36 @@ while(True):
                 if(option2==21):
                     print(student[student_id])
                 elif(option2==22):
-                    new_name = input("enter your new name: ")
+                    new_name = input("enter new name: ")
                     student[student_id]["Name"]=new_name
                 elif(option2==23):
-                    new_age = input("enter your new age: ")
+                    new_age = input("enter new age: ")
                     student[student_id]["age"]=new_age
                 elif(option2==24):
                     break
+        else:
+            print("student does not exist")
+
+    elif(option1==3):
+        student_id = int(input("enter student ID: "))
+    
+        if(student_id in student):
+            course = input("enter course name: ")
+            student[student_id]["course"]=course
+            print(student[student_id])
+        else:
+            print("student does not exist")
+
+    elif(option1==4):
+        student_id = int(input("enter student ID: "))
+    
+        if(student_id in student):
+            total_classes = int(input("enter total no. of classes: "))
+            classes_attended = int(input("enter the no. of classes attended: "))
+            att_percentage = (classes_attended/total_classes)*100
+            print(f"attendance percentage: {att_percentage}%")
+            student[student_id]["attendance_percentage"]=att_percentage
+            print(student[student_id])
         else:
             print("student does not exist")
 
